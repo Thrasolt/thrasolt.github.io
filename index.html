@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Ist Benjamin Limbach noch im Amt</title>
     <style>
         body {
             text-align: center;
             font-family: Arial, sans-serif;
+            background-color: #333; /* Dark gray background */
+            color: white; /* White text color */
+            padding: 20px;
         }
-        .headline, .links-headline {
+        .headline, .links-headline, .summary-headline {
             font-size: 24px;
             margin-top: 20px;
         }
-        .answer, .links {
-            font-size: 22px;
+        .answer, .links, .summary-text {
+            font-size: 18px;
             margin-top: 10px;
-            color: red;
         }
         img {
             max-width: 100%;
@@ -24,6 +27,22 @@
         a {
             display: block;
             margin: 10px 0;
+            color: white; /* White color for links */
+        }
+        .checkbox-group {
+            margin: 10px 0;
+        }
+        .summary {
+            margin-top: 20px;
+            padding: 0 20px; /* Add padding for better readability */
+        }
+        @media (max-width: 600px) {
+            .summary-text {
+                font-size: 16px; /* Smaller text for smaller screens */
+            }
+            .summary {
+                padding: 0 10px; /* Less padding on smaller screens */
+            }
         }
     </style>
 </head>
@@ -34,11 +53,29 @@
 </div>
 
 <div class="answer">
-    <p>Ja, ist er!</p>
+    <!-- Checkbox for the answer -->
+    <form>
+        <div class="checkbox-group">
+            <input type="checkbox" id="yes" name="answer" value="Ja" checked>
+            <label for="yes">Ja</label>
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="no" name="answer" value="Nein">
+            <label for="no">Nein</label>
+        </div>
+    </form>
 </div>
 
-<!-- Please ensure you have the right to use the image or it is royalty-free -->
 <img src="https://cdn.imago-images.de/bild/st/0258549065/m.jpg" alt="Benjamin Limbach">
+
+<div class="summary">
+    <h2 class="summary-headline">Zusammenfassung der Affäre</h2>
+    <p class="summary-text">
+        In einem dramatischen Wende der Ereignisse hat der Justizminister von Nordrhein-Westfalen, Benjamin Limbach, für Kontroversen gesorgt, die das Herz der deutschen Justiz erschüttern. Limbach steht im Zentrum eines Skandals um die Besetzung des Präsidentenpostens des Oberverwaltungsgerichts Münster. Er unterbrach das Besetzungsverfahren, um einer bevorzugten Kandidatin aus dem Innenministerium eine Chance zu geben. Die Gerichte in Münster und Düsseldorf urteilten, dass Limbachs Handlungen rechtswidrig und manipulativ waren. Aber das ist noch nicht alles. Limbach geriet erneut unter Beschuss wegen seiner Rolle in den berüchtigten Cum-Ex-Affären. Er plante, die Hauptabteilung der Staatsanwaltschaft Köln, die für die Aufklärung dieser Fälle zuständig war, aufzuteilen, was massive Kritik von Experten und Behörden nach sich zog. Sie befürchteten, dass diese Umstrukturierung die Ermittlungen behindern könnte. Zudem wird Limbach vorgeworfen, die Weitergabe wichtiger Daten an einen Untersuchungsausschuss in Hamburg verzögert zu haben. Eine Geschichte voller Intrigen, Machtspiele und rechtlicher Verwicklungen – ein Skandal, der die politische Landschaft Nordrhein-Westfalens erschüttert.
+    </p>
+</div>
+
+
 
 <div class="links-headline">
     <h2>Aktuelle Entwicklungen</h2>
